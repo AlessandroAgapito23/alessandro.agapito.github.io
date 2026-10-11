@@ -145,19 +145,6 @@ h2.sec { font-weight: 400; font-size: var(--step-2); line-height: 1.15; margin: 
 @media (max-width: 860px) { .lessons { grid-template-columns: minmax(0, 1fr); } }
 .lesson { display: grid; gap: 0.7rem; align-content: start; min-width: 0; }
 .thumb { position: relative; border: 1px solid var(--line); border-radius: 6px; background: #000; overflow: hidden; aspect-ratio: 16 / 9; max-width: 100%; }
-.thumb.paper { display: block; width: 100%; padding: 0; background: #fff; cursor: zoom-in; font: inherit; }
-.thumb.paper img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 0.6rem; }
-.lesson.tall .thumb { aspect-ratio: 5 / 4; }
-.thumb.paper.inline { margin-top: 0.8rem; aspect-ratio: 2 / 1; }
-.thumb .zoom { position: absolute; right: 0.5rem; top: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: #444; background: rgba(255,255,255,0.85); border: 1px solid #ccc; border-radius: 4px; padding: 0.15rem 0.45rem; opacity: 0; transition: opacity 0.2s; }
-.thumb.paper:hover .zoom, .thumb.paper:focus-visible .zoom { opacity: 1; }
-dialog.lb { max-width: min(96vw, 1400px); width: 100%; padding: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
-dialog.lb::backdrop { background: rgba(0,0,0,0.8); }
-dialog.lb .lb-img { background: #fff; padding: 1rem; }
-dialog.lb img { display: block; width: 100%; height: auto; max-height: 75vh; object-fit: contain; }
-dialog.lb .lb-foot { display: flex; gap: 1rem; align-items: flex-start; justify-content: space-between; padding: 0.9rem 1.1rem; }
-dialog.lb p { margin: 0; color: var(--muted); font-size: 1rem; max-width: 60em; }
-dialog.lb button { flex: none; font-family: var(--font-mono); font-size: 0.85rem; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 4px; padding: 0.3rem 0.7rem; cursor: pointer; }
 .thumb canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .thumb .replay { position: absolute; right: 0.5rem; top: 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); background: color-mix(in srgb, #000 70%, transparent); border: 1px solid var(--line); border-radius: 4px; padding: 0.2rem 0.5rem; cursor: pointer; }
 .thumb .replay:hover { color: var(--yellow); border-color: var(--yellow); }
@@ -316,7 +303,7 @@ footer a { color: var(--muted); }
       <h2 class="sec">Current work</h2>
       <div class="lessons">
         <article class="lesson">
-          <button class="thumb paper" type="button" data-cap="Marginal primary-mass distribution p(m₁|z) at z = 0.2 and z = 1.0 in the redshift-evolving model (5%, 50%, 95% bands; thin lines are hyper-posterior draws), compared with a non-evolving model (dashed). Inset: KL divergence between the two redshift slices; 94% of draws fall below the chosen bound. From Phys. Rev. D 114, 063503 (2026)."><img src="figs/spectral-pm1-kl.webp" width="1500" height="963" alt="Primary-mass distribution at redshift 0.2 and 1.0 in the evolving model compared with the non-evolving model, with an inset histogram of the KL divergence between them." loading="lazy"><span class="zoom">enlarge</span></button>
+          <div class="thumb"><canvas data-scene="spectral" role="img" aria-label="Animated sketch: a source-frame mass spectrum with a peak, redrawn at increasing redshift; the peak shifts to higher detector-frame mass by a factor 1 + z."></canvas><button class="replay" type="button">replay</button></div>
           <span class="kind">Spectral sirens</span>
           <h3><span class="m">H</span><sub>0</sub> is robust to redshift evolution of the black-hole mass spectrum<span class="badge">lead author</span></h3>
           <p>We revisited spectral-siren constraints while letting the main scales of the binary-black-hole primary-mass spectrum evolve with redshift, the first such study at current sensitivity. I developed metrics based on the Kullback–Leibler divergence to assess evolution at each mass scale and parameter level. The constraints stay robust, with no compelling evidence for evolution; the evolving model shifts <span class="m">H</span><sub>0</sub> slightly and non-significantly lower.</p>
@@ -325,7 +312,7 @@ footer a { color: var(--muted); }
         </article>
 
         <article class="lesson">
-          <button class="thumb paper" type="button" data-cap="GW170817 treated as a dark siren. (a) Candidate galaxies in the localization volume, colored by host probability, with the GW redshift posterior for h = 0.5, 0.7, 0.9. (b) Posterior on the galaxy-weight exponent: ε = 1.1 (+0.9, −0.8), p(ε &gt; 0) ≃ 92%. (c) Host probabilities: NGC 4993 ranks first with 20%, and 47% when H₀ is fixed. From arXiv:2609.38110."><img src="figs/dark-sirens-gw170817.webp" width="2000" height="940" alt="GW170817 as a dark siren: galaxies in the localization volume colored by host probability, the posterior on the galaxy-weight exponent epsilon, and the ranking of candidate hosts led by NGC 4993." loading="lazy"><span class="zoom">enlarge</span></button>
+          <div class="thumb"><canvas data-scene="darksiren" role="img" aria-label="Animated sketch: candidate galaxies inside a gravitational-wave localization ellipse, with host probabilities that change as the galaxy weight is learned."></canvas><button class="replay" type="button">replay</button></div>
           <span class="kind">Dark sirens</span>
           <h3>Measuring the galaxy–merger relation and ranking individual hosts<span class="badge">lead author</span></h3>
           <p>Dark-siren analyses usually marginalize over the unknown host and fix the probability that each galaxy hosts a merger. We invert that logic: the luminosity-dependent galaxy–merger relation and the probability of each candidate host are inferred jointly with cosmology and the binary population, accounting for both GW and galaxy selection effects.</p>
@@ -333,8 +320,8 @@ footer a { color: var(--muted); }
           <span class="ref"><a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">arXiv:2609.38110</a> · submitted to PRL · <a href="https://github.com/CosmoStatGW/pymcpop-gw" target="_blank" rel="noopener">pymcpop-gw</a></span>
         </article>
 
-        <article class="lesson tall">
-          <button class="thumb paper" type="button" data-cap="Posterior median of the joint population density p(m₁, m₂), with the peaks (C), valleys (V) and the T60 front identified from the inferred density, and the one-dimensional marginals compared with independent 1D fits. De Renzis, Agapito &amp; Mancarella, ready for submission."><img src="figs/mass-plane-landscape.webp" width="1500" height="1406" alt="Posterior median density of compact binaries in the primary and secondary mass plane, with labelled peaks, valleys and front, and the one-dimensional marginals." loading="lazy"><span class="zoom">enlarge</span></button>
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="massplane" role="img" aria-label="Animated sketch: Gaussian mixture components drawn in the primary–secondary mass plane, below the m2 = m1 diagonal."></canvas><button class="replay" type="button">replay</button></div>
           <span class="kind">Population reconstruction</span>
           <h3>A weakly modelled view of the joint compact-binary mass plane<span class="badge">corresponding author</span></h3>
           <p>With V. De Renzis, a JAX/NumPyro mixture-model reconstruction of the population in the joint source-frame mass plane, running HMC on GPUs. On GWTC-5, keeping the full two-dimensional mass distribution tightens cosmological constraints relative to a flexible one-dimensional model.</p>
@@ -342,8 +329,8 @@ footer a { color: var(--muted); }
           <span class="ref">Ready for submission</span>
         </article>
 
-        <article class="lesson tall">
-          <button class="thumb paper" type="button" data-cap="Correlation ρ between the detector-frame population density in the (m₁,d, d_L) plane and the parameters H₀, Ω_m,0, the peak location μ_g and γ. Curves show the mass spectrum mapped to the detector frame at z = 0.19, 0.34, 0.84 and 1.83. From the third-generation spectral-siren forecasts."><img src="figs/forecast-correlations.webp" width="740" height="366" alt="Correlation between the population density in the detector-frame mass and luminosity-distance plane and the parameters H0, Omega_m, mu_g and gamma." loading="lazy"><span class="zoom">enlarge</span></button>
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="et" role="img" aria-label="Animated sketch: noise amplitude spectral density of the current LVK network compared with the lower curve of the Einstein Telescope."></canvas><button class="replay" type="button">replay</button></div>
           <span class="kind">Third generation &amp; LVK</span>
           <h3>Forecasts for the Einstein Telescope and LVK production analyses</h3>
           <p>A blinded, GPU-accelerated mock data challenge pushing spectral-siren pipelines (chimera, icarogw, pymcpop-gw) to the 3G regime. In the LVK cosmology working group I run collaboration pipelines, including icarogw, on GWTC-6 data for the cosmology paper expected in December 2026.</p>
@@ -512,12 +499,11 @@ footer a { color: var(--muted); }
   </section>
 </main>
 
-<dialog class="lb" id="lb" aria-label="Figure"><div class="lb-img"><img id="lb-img" alt=""></div><div class="lb-foot"><p id="lb-cap"></p><button type="button" id="lb-close">Close</button></div></dialog>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Alessandro Agapito</span>
-    <span>Interactive figures are illustrative; figures on white are from the papers.</span>
+    <span>All figures are illustrative sketches, not results from the papers.</span>
   </div>
 </footer>
 
@@ -925,16 +911,6 @@ footer a { color: var(--muted); }
     thumbs.forEach(function (cv) { io.observe(cv); });
   }
 
-  const lb = document.getElementById("lb");
-  document.querySelectorAll(".thumb.paper").forEach(function (b) {
-    b.addEventListener("click", function () {
-      const img = b.querySelector("img"); document.getElementById("lb-img").src = img.src; document.getElementById("lb-img").alt = img.alt;
-      document.getElementById("lb-cap").textContent = b.dataset.cap || "";
-      if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
-    });
-  });
-  document.getElementById("lb-close").addEventListener("click", function () { lb.close ? lb.close() : lb.removeAttribute("open"); });
-  lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
   function redrawAll() { layoutVol(); if (state) { drawVol(); drawLike(); } layoutChirp(); drawChirp(null); thumbs.forEach(function (cv) { renderThumb(cv, 1); }); }
   layoutVol(); updateHero(); layoutChirp(); drawChirp(null);
   if (!RM) requestAnimationFrame(loop);
