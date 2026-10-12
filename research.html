@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Research · Alessandro Agapito</title>
+<meta name="description" content="Alessandro Agapito, Ph.D. candidate in gravitational-wave cosmology at CPT, Aix-Marseille Université. Dark sirens, spectral sirens, Bayesian inference, LIGO-Virgo-KAGRA and Einstein Telescope.">
+<meta name="author" content="Alessandro Agapito">
+<meta name="theme-color" content="#0B0C0F">
+<link rel="canonical" href="https://alessandroagapito23.github.io/research.html">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Research · Alessandro Agapito">
+<meta property="og:description" content="Alessandro Agapito, Ph.D. candidate in gravitational-wave cosmology at CPT, Aix-Marseille Université. Dark sirens, spectral sirens, Bayesian inference, LIGO-Virgo-KAGRA and Einstein Telescope.">
+<meta property="og:url" content="https://alessandroagapito23.github.io/research.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0C0F'/%3E%3Cpath d='M3 16 Q6 11 8 16 T12 16 T15 16 Q16.5 7 18 16 Q19.5 25 21 16 Q22 10 23 16 Q24 21 25 16 L29 16' fill='none' stroke='%2358C4DD' stroke-width='2'/%3E%3Ccircle cx='25' cy='16' r='2' fill='%23F4D35E'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="assets/style.css">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<nav class="nav" aria-label="Pages">
+  <div class="wrap">
+    <a class="mark" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#2A2D35"></circle><path d="M3 16 Q6 11 8 16 T12 16 T15 16 Q16.5 7 18 16 Q19.5 25 21 16 Q22 10 23 16 Q24 21 25 16 L29 16" fill="none" stroke="#58C4DD" stroke-width="1.6"></path><circle cx="25" cy="16" r="1.8" fill="#F4D35E"></circle></svg>
+      <span>Alessandro Agapito</span>
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="software.html">Software</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="pagehead">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h1>Standard sirens as probes of cosmology, astrophysics and fundamental physics</h1>
+    
+  </div>
+</header>
+<main>
+  <section class="block" id="about">
+    <div class="wrap">
+      <p class="label">§ Overview</p>
+      <div class="prose">
+
+                <p>Gravitational waves from merging compact binaries give a self-calibrated measurement of the luminosity distance, but not of the redshift. Siren methods recover the missing redshift information from somewhere else: features in the source-frame mass distribution (spectral sirens) or catalogues of candidate host galaxies (dark sirens). Together they give an independent route to <span class="m">H</span><sub>0</sub> and to the Hubble tension.</p>
+        <div class="eqn">
+          <span class="m">d</span><sub>L</sub>(<span class="m">z</span>) ≈ <span class="m">cz</span> / <span class="m">H</span><sub>0</sub>, &nbsp;&nbsp; <span class="m">m</span><sub>det</sub> = (1 + <span class="m">z</span>) <span class="m">m</span><sub>src</sub>
+          <span class="note">The signal gives <span class="m">d</span><sub>L</sub> and the redshifted masses. A known scale in the source-frame masses, or a host galaxy, supplies <span class="m">z</span>.</span>
+        </div>
+        <p>My Ph.D., supervised by <a href="https://inspirehep.net/authors/1498209" target="_blank" rel="noopener">Michele Mancarella</a> at the Centre de Physique Théorique in Marseille, targets the systematics that limit these methods: the mass model and its redshift evolution, and the galaxy–merger relation. I design the methods to scale from the current LVK network to third-generation detectors, using hierarchical population models, Hamiltonian Monte Carlo on GPUs, and normalizing flows for expensive steps such as selection effects.</p>
+        <dl class="facts">
+          <div><dt>Collaborations</dt><dd>LIGO–Virgo–KAGRA (Virgo, CBC group; cosmology analysts team) · Einstein Telescope (Observational Science Board) · GdR Ondes Gravitationnelles</dd></div>
+          <div><dt>Methods</dt><dd>Hierarchical Bayesian inference, HMC, mixture models, normalizing flows, Fisher forecasts</dd></div>
+          <div><dt>Group role</dt><dd>Coordinator of the CPT cosmology group's weekly meetings</dd></div>
+        </dl>
+
+      </div>
+      <div class="trybox">
+        <figure class="fig" aria-labelledby="fig-title">
+      <div class="fig-head">
+        <h3 id="fig-title" style="font-weight:400;font-size:1.35rem;margin:0">Which galaxy hosted the merger?</h3>
+        <span class="tag">toy dark siren · simulated · drag to rotate</span>
+      </div>
+      <canvas id="vol" role="img" aria-label="Three-dimensional view of a simulated galaxy catalogue in right ascension, declination and redshift, with the gravitational-wave localization volume drawn as a tube along redshift. The most probable host galaxies are numbered."></canvas>
+      <div class="controls">
+        <div class="control">
+          <label for="h0">Hubble constant <span class="eq"><span class="m">H</span><sub>0</sub></span> = <span id="h0-val">70</span> <span class="unit">km/s/Mpc</span></label>
+          <input id="h0" type="range" min="40" max="100" step="1" value="70">
+          <div class="scale"><span>40</span><span>moves the tube along z</span><span>100</span></div>
+        </div>
+        <div class="control">
+          <label for="eps">Galaxy weight <span class="eq"><span class="m">w</span> ∝ <span class="m">L</span><sup class="m">ε</sup></span>, &nbsp;<span class="m">ε</span> = <span id="eps-val">1.00</span></label>
+          <input id="eps" type="range" min="0" max="2" step="0.05" value="1">
+          <div class="scale"><span>0 · uniform</span><span>1 · ∝ L</span><span>2 · ∝ L²</span></div>
+        </div>
+      </div>
+      <div class="fig-row">
+        <div class="rank">
+          <h3>Host ranking</h3>
+          <ol id="rank-list"></ol>
+          <div class="readout">
+            <div>True host <b class="y" id="true-rank">#1 · 19.0%</b></div>
+            <div>Effective candidates <b id="neff">14.7</b></div>
+          </div>
+        </div>
+        <div class="like">
+          <h3>What the catalogue says about <span class="m">H</span><sub>0</sub></h3>
+          <canvas id="like" role="img" aria-label="Toy likelihood of the Hubble constant obtained by summing over all candidate host galaxies."></canvas>
+        </div>
+      </div>
+      <figcaption class="caption">The gravitational wave gives a sky area and a luminosity distance. <span class="m">H</span><sub>0</sub> converts that distance into a redshift window and moves the tube along <span class="m">z</span>; the weight <span class="m">ε</span> decides how much brighter galaxies count. Both pieces of information change which galaxy looks like the host (true host in yellow). In <a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">arXiv:2609.38110</a> the galaxy–merger relation is inferred from the data together with cosmology, instead of being fixed by hand.</figcaption>
+    </figure>
+      </div>
+    </div>
+  </section>
+  <section class="block" id="work">
+    <div class="wrap">
+      <p class="label">§ Current work</p>
+      <h2 class="sec">Current work</h2>
+      <div class="lessons">
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="ridge" role="img" aria-label="Animated ridge plot of the primary-mass distribution p(m1 | z) at sixteen redshifts, stacked obliquely. Tracks follow the 10 and 35 solar-mass peaks across redshift while the model morphs between fixed and evolving peak scales."></canvas><button class="replay" type="button">replay</button></div>
+          <span class="kind">Spectral sirens</span>
+          <h3><span class="m">H</span><sub>0</sub> is robust to redshift evolution of the black-hole mass spectrum<span class="badge">lead author</span></h3>
+          <p>We revisited spectral-siren constraints while letting the main scales of the binary-black-hole primary-mass spectrum evolve with redshift, the first such study at current sensitivity. I developed metrics based on the Kullback–Leibler divergence to assess evolution at each mass scale and parameter level. The constraints stay robust, with no compelling evidence for evolution; the evolving model shifts <span class="m">H</span><sub>0</sub> slightly and non-significantly lower.</p>
+          <details class="more"><summary>More</summary><p>Event- and posterior-level diagnostics trace that low-<span class="m">H</span><sub>0</sub> tail to high-mass features at higher redshift. O5-like simulations show how higher-redshift events will pin the spectral features directly from data.</p></details>
+          <span class="ref"><a href="https://journals.aps.org/prd/abstract/10.1103/jk7y-ddyb" target="_blank" rel="noopener">Phys. Rev. D 114, 063503 (2026)</a> · <a href="https://arxiv.org/abs/2605.20112" target="_blank" rel="noopener">arXiv:2605.20112</a></span>
+        </article>
+
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="sampler" role="img" aria-label="Animated discrete sampler hopping between candidate host galaxies inside a gravitational-wave localization region. Bars show host probabilities estimated from visit counts; the true host is in yellow. A trace shows the galaxy-weight exponent epsilon sampled jointly."></canvas><button class="replay" type="button">replay</button></div>
+          <span class="kind">Dark sirens</span>
+          <h3>Measuring the galaxy–merger relation and ranking individual hosts<span class="badge">lead author</span></h3>
+          <p>Dark-siren analyses usually marginalize over the unknown host and fix the probability that each galaxy hosts a merger. We invert that logic: the luminosity-dependent galaxy–merger relation and the probability of each candidate host are inferred jointly with cosmology and the binary population, accounting for both GW and galaxy selection effects.</p>
+          <details class="more"><summary>More</summary><p>A mixed discrete–continuous scheme, built on pymcpop-gw and compatible with HMC in PyMC, samples up to O(10³) parameters. Simulations recover the injected relations. Treating GW170817 as a dark siren, we find a mild preference for non-uniform weights and place the true host, NGC 4993, among the top-ranked candidates. Wrong weighting assumptions bias the per-event host ranking, which matters for electromagnetic follow-up.</p></details>
+          <span class="ref"><a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">arXiv:2609.38110</a> · submitted to PRL · <a href="https://github.com/CosmoStatGW/pymcpop-gw" target="_blank" rel="noopener">pymcpop-gw</a></span>
+        </article>
+
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="massplane" role="img" aria-label="Animated density of compact binaries in the primary and secondary mass plane, log scale, magma colour map. Labelled features P1, P2, P3, S1 and S2 appear and fade in turn, with a panel of their prominence."></canvas><button class="replay" type="button">replay</button></div>
+          <span class="kind">Population reconstruction</span>
+          <h3>A weakly modelled view of the joint compact-binary mass plane<span class="badge">corresponding author</span></h3>
+          <p>With V. De Renzis, a JAX/NumPyro mixture-model reconstruction of the population in the joint source-frame mass plane, running HMC on GPUs. On GWTC-5, keeping the full two-dimensional mass distribution tightens cosmological constraints relative to a flexible one-dimensional model.</p>
+          <details class="more"><summary>More</summary><p>Alongside it, a model-independent way to identify population features and quantify their stability and prominence directly from the inferred density (<a href="https://github.com/Mik3M4n/posterior-landscape" target="_blank" rel="noopener">posterior-landscape</a>), tracking how each feature correlates with cosmology. Features carry information in two ways: coherent anchoring of a mass scale, and genuinely two-dimensional geometry that a primary-mass spectrum with a global mass-ratio prescription cannot represent.</p></details>
+          <span class="ref">Ready for submission</span>
+        </article>
+
+        <article class="lesson">
+          <div class="thumb"><canvas data-scene="forecast" role="img" aria-label="Animated sketch of the forecast for H(z)/(1+z) from spectral sirens with the Einstein Telescope for two signal-to-noise thresholds, with the relative precision in a lower panel; best precision near z of 1.4 to 1.5."></canvas><button class="replay" type="button">replay</button><button class="paperbtn" type="button" aria-pressed="false">paper figure</button><div class="paper"><img src="assets/forecast-hz.png" alt="Figure from the paper: H(z)/(1+z) versus redshift for the s/N-75 and s/N-60 scenarios with the fiducial curve, and the relative precision below." loading="lazy"></div></div>
+          <span class="kind">Third generation &amp; LVK</span>
+          <h3>Forecasts for the Einstein Telescope and LVK production analyses</h3>
+          <p>A blinded, GPU-accelerated mock data challenge pushing spectral-siren pipelines (chimera, icarogw, pymcpop-gw) to the 3G regime. In the LVK cosmology working group I run collaboration pipelines, including icarogw, on GWTC-6 data for the cosmology paper expected in December 2026.</p>
+          <details class="more"><summary>More</summary><p>In my M.Sc. thesis I extended the Fisher-matrix code GWFish to test the nature of compact objects and horizon-scale physics at ET sensitivity; the results are part of the ET Blue Book. I also contribute to ET design-study work with GWFAST.</p></details>
+          <span class="ref"><a href="https://www.aanda.org/articles/aa/full_html/2026/07/aa59517-26/aa59517-26.html" target="_blank" rel="noopener">A&amp;A 711, A120</a> · <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2026/03/081" target="_blank" rel="noopener">JCAP 03 (2026) 081</a> · <a href="https://arxiv.org/abs/2607.27311" target="_blank" rel="noopener">arXiv:2607.27311</a></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="next">
+    <div class="wrap">
+      <p class="label">§ Next</p>
+      <h2 class="sec">Open questions I want to work on</h2>
+      <div class="future">
+        <div>
+          <span class="q">Q1 · dark sirens</span>
+          <h3>Which galaxies host compact-binary mergers?</h3>
+          <p>Map the trade-off between localization accuracy and galaxy–merger information, keep the cost down with GPU sampling, then move past a single universal host relation toward heterogeneous galaxy subpopulations inferred jointly with the luminosity function.</p>
+        </div>
+        <div>
+          <span class="q">Q2 · spectral sirens</span>
+          <h3>How flexible can a mass model be before it stops measuring <span class="m">H</span><sub>0</sub>?</h3>
+          <p>Extend the weakly modelled reconstruction to the joint mass–redshift space and to spin, with explicit robustness tests on the priors and model construction that flexibility quietly reintroduces.</p>
+        </div>
+        <div>
+          <span class="q">Q3 · cross-correlations</span>
+          <h3>Do gravitational waves trace galaxies the way galaxies do?</h3>
+          <p>Use the measured galaxy–merger relation to interpret the GW clustering bias and to test the common assumption that GW and galaxy biases coincide, ahead of IGWN IR1, Euclid DR1 and the Einstein Telescope.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap chirp-band">
+    <canvas id="chirp" aria-hidden="true"></canvas>
+    <div class="chirp-note">
+      <span>A compact-binary chirp <span class="m">h</span>(<span class="m">t</span>): its amplitude fixes the luminosity distance <span class="m">d</span><sub>L</sub>.</span>
+      <span>The redshift <span class="m">z</span> has to come from somewhere else.</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <span>© 2026 Alessandro Agapito · Centre de Physique Théorique, Aix-Marseille Université</span>
+    <span>Animated figures are illustrative sketches of the papers' results.</span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
