@@ -233,6 +233,18 @@ footer a { color: var(--muted); }
 .sw p { margin: 0.35rem 0 0; color: var(--muted); font-size: 1rem; }
 footer .chirp-band { padding-top: 1rem; }
 
+/* GitHub avatar, tinted to the site palette; true colours on hover */
+.portrait.avatar { aspect-ratio: 1; border: 0; border-radius: 50%; overflow: visible; background: transparent; max-width: 15rem; }
+.portrait.avatar img { position: absolute; inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 50%; object-fit: cover; filter: grayscale(1) contrast(1.08) brightness(0.95); transition: filter 0.5s ease; }
+.portrait.avatar::after { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: linear-gradient(160deg, #58C4DD, #2A7A99 70%, #0B0C0F); mix-blend-mode: color; opacity: 0.85; pointer-events: none; transition: opacity 0.5s ease; }
+.portrait.avatar:hover img { filter: none; }
+.portrait.avatar:hover::after { opacity: 0; }
+.portrait.avatar.nophoto::after { display: none; }
+.portrait.avatar svg:not(.ring) { inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 50%; }
+.portrait.avatar .ring { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; animation: ringspin 24s linear infinite; }
+@keyframes ringspin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .portrait.avatar .ring { animation: none; } }
+
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -257,7 +269,7 @@ footer .chirp-band { padding-top: 1rem; }
 <header class="hero" id="top">
   <div class="wrap profile">
     <aside>
-      <div class="portrait"><img src="photo.jpg" alt="Portrait of Alessandro Agapito" onerror="this.parentElement.classList.add('nophoto');this.remove()"><svg viewBox="0 0 160 200" aria-hidden="true"><rect width="160" height="200" fill="#121419"/><circle cx="80" cy="100" r="46" fill="none" stroke="#2A2D35"/><path d="M14 100 Q30 76 40 100 T60 100 T76 100 Q84 54 92 100 Q100 146 108 100 Q114 70 120 100 Q126 124 132 100 L148 100" fill="none" stroke="#58C4DD" stroke-width="2"/><circle cx="132" cy="100" r="4" fill="#F4D35E"/></svg></div>
+      <div class="portrait avatar"><img src="https://github.com/AlessandroAgapito23.png?size=460" alt="Portrait of Alessandro Agapito" width="460" height="460" onerror="this.parentElement.classList.add('nophoto');this.remove()"><svg viewBox="0 0 160 200" aria-hidden="true"><rect width="160" height="200" fill="#121419"/><circle cx="80" cy="100" r="46" fill="none" stroke="#2A2D35"/><path d="M14 100 Q30 76 40 100 T60 100 T76 100 Q84 54 92 100 Q100 146 108 100 Q114 70 120 100 Q126 124 132 100 L148 100" fill="none" stroke="#58C4DD" stroke-width="2"/><circle cx="132" cy="100" r="4" fill="#F4D35E"/></svg><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="97" fill="none" stroke="#2A2D35" stroke-width="1"/><path d="M100 3 A97 97 0 0 1 197 100" fill="none" stroke="#58C4DD" stroke-width="2" stroke-linecap="round"/><circle cx="197" cy="100" r="4" fill="#F4D35E"/></svg></div>
       <ul class="contact">
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 14V4l5-2 5 2v10M1.5 14h13M6 14v-3h4v3M6 6.5h.01M10 6.5h.01M6 9h.01M10 9h.01"/></svg><span><a href="https://www.cpt.univ-mrs.fr/" target="_blank" rel="noopener">Centre de Physique Théorique</a><br>Aix-Marseille Université</span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.5s5-4.3 5-8.2A5 5 0 0 0 3 6.3c0 3.9 5 8.2 5 8.2z"/><circle cx="8" cy="6.3" r="1.7"/></svg><span><a href="https://www.openstreetmap.org/search?query=Campus%20de%20Luminy%20Marseille" target="_blank" rel="noopener">Campus de Luminy, Marseille</a></span></li>
