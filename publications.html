@@ -231,6 +231,24 @@ footer a { color: var(--muted); }
 .sw p { margin: 0.35rem 0 0; color: var(--muted); font-size: 1rem; }
 footer .chirp-band { padding-top: 1rem; }
 
+/* GitHub avatar, tinted to the site palette; true colours on hover */
+.portrait.avatar { aspect-ratio: 1; border: 0; border-radius: 50%; overflow: visible; background: transparent; max-width: 15rem; }
+.portrait.avatar img { position: absolute; inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 50%; object-fit: cover; filter: grayscale(1) contrast(1.08) brightness(0.95); transition: filter 0.5s ease; }
+.portrait.avatar::after { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: linear-gradient(160deg, #58C4DD, #2A7A99 70%, #0B0C0F); mix-blend-mode: color; opacity: 0.85; pointer-events: none; transition: opacity 0.5s ease; }
+.portrait.avatar:hover img { filter: none; }
+.portrait.avatar:hover::after { opacity: 0; }
+.portrait.avatar.nophoto::after { display: none; }
+.portrait.avatar svg:not(.ring) { inset: 9px; width: calc(100% - 18px); height: calc(100% - 18px); border-radius: 50%; }
+.portrait.avatar .ring { display: block; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; animation: ringspin 24s linear infinite; }
+@keyframes ringspin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .portrait.avatar .ring { animation: none; } }
+
+.intro { font-size: clamp(1.3rem, 1vw + 1rem, 1.55rem); line-height: 1.45; max-width: 30em; margin: 0 0 1.4rem; color: var(--ink); }
+.quote { margin: 0 auto; max-width: 40rem; text-align: center; padding-block: 1rem; }
+.quote p { font-style: italic; font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem); line-height: 1.3; margin: 0 0 1rem; text-wrap: balance; }
+.quote footer { font-family: var(--font-mono); font-size: 0.85rem; color: var(--blue); }
+.quote footer::before { content: "— "; }
+
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -278,7 +296,12 @@ footer .chirp-band { padding-top: 1rem; }
         <li><div>
           <span class="t">A weakly modelled view of the joint compact-binary mass plane: population structure and spectral-siren cosmology</span>
           <span class="a">V. De Renzis, <b>A. Agapito</b>, M. Mancarella</span>
-          <span class="v"><span>Ready for submission · corresponding author</span></span>
+          <span class="v"><span>Submitted to PRD (2026) · corresponding author</span><a href="https://arxiv.org/abs/2610.10535" target="_blank" rel="noopener">arXiv:2610.10535</a></span>
+        </div></li>
+        <li><div>
+          <span class="t">A Gaussian-process reconstruction of gravitational-wave friction from dark standard sirens</span>
+          <span class="a">M. Mancarella, V. De Renzis, <b>A. Agapito</b></span>
+          <span class="v"><span>Ready for submission</span></span>
         </div></li>
         <li><div>
           <span class="t">Pushing spectral siren cosmology into the third-generation era: a blinded mock data challenge</span>
@@ -288,7 +311,7 @@ footer .chirp-band { padding-top: 1rem; }
       </ol>
 
       <h3 class="subhead">Einstein Telescope, with active contribution</h3>
-      <ol class="pubs" start="5" style="counter-reset: pub 4">
+      <ol class="pubs" start="6" style="counter-reset: pub 5">
         <li><div>
           <span class="t">The Science of the Einstein Telescope</span>
           <span class="a">ET Collaboration (A. Abac et al.)</span>
@@ -302,7 +325,7 @@ footer .chirp-band { padding-top: 1rem; }
       </ol>
 
       <h3 class="subhead">LIGO–Virgo–KAGRA</h3>
-      <p class="prose" style="max-width:38em;margin:0">Author of 36 LVK collaboration papers, including the GWTC-4.0 and GWTC-5.0 catalogues and their cosmology, population and tests-of-GR companions. The full list is on <a href="https://inspirehep.net/authors/2901314" target="_blank" rel="noopener">INSPIRE</a>.</p>
+      <p class="prose" style="max-width:38em;margin:0">Author of 40 LVK collaboration papers, including the GWTC-4.0 and GWTC-5.0 catalogues and their cosmology, population and tests-of-GR companions. The full list is on <a href="https://inspirehep.net/authors/2901314" target="_blank" rel="noopener">INSPIRE</a>.</p>
 
     </div>
   </section>

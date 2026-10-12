@@ -245,6 +245,12 @@ footer .chirp-band { padding-top: 1rem; }
 @keyframes ringspin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .portrait.avatar .ring { animation: none; } }
 
+.intro { font-size: clamp(1.3rem, 1vw + 1rem, 1.55rem); line-height: 1.45; max-width: 30em; margin: 0 0 1.4rem; color: var(--ink); }
+.quote { margin: 0 auto; max-width: 40rem; text-align: center; padding-block: 1rem; }
+.quote p { font-style: italic; font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem); line-height: 1.3; margin: 0 0 1rem; text-wrap: balance; }
+.quote footer { font-family: var(--font-mono); font-size: 0.85rem; color: var(--blue); }
+.quote footer::before { content: "— "; }
+
 </style>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
@@ -274,6 +280,7 @@ footer .chirp-band { padding-top: 1rem; }
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 14V4l5-2 5 2v10M1.5 14h13M6 14v-3h4v3M6 6.5h.01M10 6.5h.01M6 9h.01M10 9h.01"/></svg><span><a href="https://www.cpt.univ-mrs.fr/" target="_blank" rel="noopener">Centre de Physique Théorique</a><br>Aix-Marseille Université</span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14.5s5-4.3 5-8.2A5 5 0 0 0 3 6.3c0 3.9 5 8.2 5 8.2z"/><circle cx="8" cy="6.3" r="1.7"/></svg><span><a href="https://www.openstreetmap.org/search?query=Campus%20de%20Luminy%20Marseille" target="_blank" rel="noopener">Campus de Luminy, Marseille</a></span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="M2 4l6 5 6-5"/></svg><span><a href="mailto:alessandro.agapito@cpt.univ-mrs.fr">alessandro.agapito@cpt.univ-mrs.fr</a><br><button class="copy" id="copy-email" type="button">Copy email</button></span></li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5h5.5L13 5v9.5H4z"/><path d="M9.5 1.5V5H13M6.5 8.5h4M6.5 11h4"/></svg><span><a href="Agapito_CV.pdf" target="_blank" rel="noopener">Curriculum vitae (PDF)</a></span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h4.5A1.5 1.5 0 0 1 8 5v8.5a1.5 1.5 0 0 0-1.5-1.5H2zM14 3.5H9.5A1.5 1.5 0 0 0 8 5v8.5a1.5 1.5 0 0 1 1.5-1.5H14z"/></svg><span><a href="https://inspirehep.net/authors/2901314" target="_blank" rel="noopener">INSPIRE</a></span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M5.8 5v6M8 5h1.6a3 3 0 0 1 0 6H8z"/></svg><span><a href="https://orcid.org/0009-0005-9004-3163" target="_blank" rel="noopener">ORCID</a></span></li>
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5"/></svg><span><a href="https://github.com/AlessandroAgapito23" target="_blank" rel="noopener">GitHub</a></span></li>
@@ -281,14 +288,15 @@ footer .chirp-band { padding-top: 1rem; }
       </ul>
     </aside>
     <div>
-      <p class="role">Ph.D. candidate · Aix-Marseille Université</p>
+      <p class="role">(Astro)physicist · Ph.D. candidate · Aix-Marseille Université</p>
       <h1>Alessandro Agapito</h1>
       <p class="subtitle">Gravitational-wave cosmology</p>
+      <p class="intro">Astrophysicist with a background in theory, statistics and computational physics, working on gravitational waves, cosmology, tests of General Relativity, Bayesian inference and machine learning.</p>
       <div class="bio">
-        <p>I build Bayesian methods that turn gravitational-wave detections into measurements of the expansion of the Universe, of the compact-binary population, and of the galaxies that host these mergers. I work with LIGO–Virgo–KAGRA data today and prepare the science case of the Einstein Telescope.</p>
-        <p>My Ph.D., supervised by <a href="https://inspirehep.net/authors/1498209" target="_blank" rel="noopener">Michele Mancarella</a> at the Centre de Physique Théorique in Marseille, targets the systematics that limit standard-siren methods: the mass model and its redshift evolution, and the galaxy–merger relation, with methods designed to scale from the current network to third-generation detectors.</p>
+        <p>My research turns the rapidly growing catalogue of gravitational-wave observations, complementary to galaxy surveys and early-Universe experiments, into probes of cosmology, compact-binary astrophysics and fundamental physics. Gravitational waves give self-calibrated distances but not redshifts: standard-siren methods recover the missing information from features in the mass distribution of compact binaries (spectral sirens) or from galaxy catalogues (dark sirens), an independent route to the Hubble tension.</p>
+        <p>In my Ph.D., supervised by <a href="https://inspirehep.net/authors/1498209" target="_blank" rel="noopener">Michele Mancarella</a> at the Centre de Physique Théorique in Marseille, I develop standard-siren methods at the interface between Bayesian statistics and hierarchical population modelling, targeting the systematics that limit them: the mass model and its redshift evolution, and the galaxy–merger relation. They are built to scale from the current LIGO–Virgo–KAGRA network to the Einstein Telescope, two collaborations I am an active member of.</p>
       </div>
-      <ul class="chips keywords"><li>Gravitational waves</li><li>Cosmology</li><li>Standard sirens</li><li>Bayesian inference</li><li>Einstein Telescope</li></ul>
+      <ul class="chips keywords"><li>Gravitational waves</li><li>Cosmology</li><li>Standard sirens</li><li>Bayesian inference</li></ul>
       <div class="status"><span class="dot" aria-hidden="true"></span>Defence autumn 2027 · applying for postdoctoral positions</div>
     </div>
   </div>
@@ -301,6 +309,11 @@ footer .chirp-band { padding-top: 1rem; }
       <h2 class="sec">Recent publications</h2>
       <ol class="pubs">
         <li><div>
+          <span class="t"><a href="https://arxiv.org/abs/2610.10535" target="_blank" rel="noopener">A weakly modelled view of the joint compact-binary mass plane: population structure and spectral-siren cosmology</a></span>
+          <span class="a">V. De Renzis, <b>A. Agapito</b>, M. Mancarella</span>
+          <span class="v"><span>Submitted to PRD (2026) · corresponding author</span><a href="https://arxiv.org/abs/2610.10535" target="_blank" rel="noopener">arXiv:2610.10535</a></span>
+        </div></li>
+        <li><div>
           <span class="t"><a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">Gravitational-wave dark sirens as astrophysical probes: inferring galaxy–merger relations and identifying individual hosts</a></span>
           <span class="a"><b>A. Agapito</b>, M. Mancarella</span>
           <span class="v"><span>Submitted to PRL (2026)</span><a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">arXiv:2609.38110</a></span>
@@ -311,9 +324,9 @@ footer .chirp-band { padding-top: 1rem; }
           <span class="v"><a href="https://journals.aps.org/prd/abstract/10.1103/jk7y-ddyb" target="_blank" rel="noopener">Phys. Rev. D 114, 063503 (2026)</a><a href="https://arxiv.org/abs/2605.20112" target="_blank" rel="noopener">arXiv:2605.20112</a></span>
         </div></li>
         <li><div>
-          <span class="t">A weakly modelled view of the joint compact-binary mass plane: population structure and spectral-siren cosmology</span>
-          <span class="a">V. De Renzis, <b>A. Agapito</b>, M. Mancarella</span>
-          <span class="v"><span>Ready for submission · corresponding author</span></span>
+          <span class="t">A Gaussian-process reconstruction of gravitational-wave friction from dark standard sirens</span>
+          <span class="a">M. Mancarella, V. De Renzis, <b>A. Agapito</b></span>
+          <span class="v"><span>Ready for submission</span></span>
         </div></li>
         <li><div>
           <span class="t"><a href="https://arxiv.org/abs/2602.17756" target="_blank" rel="noopener">Pushing spectral siren cosmology into the third-generation era: a blinded mock data challenge</a></span>
@@ -321,14 +334,14 @@ footer .chirp-band { padding-top: 1rem; }
           <span class="v"><a href="https://www.aanda.org/articles/aa/full_html/2026/07/aa59517-26/aa59517-26.html" target="_blank" rel="noopener">Astron. Astrophys. 711, A120 (2026)</a><a href="https://arxiv.org/abs/2602.17756" target="_blank" rel="noopener">arXiv:2602.17756</a></span>
         </div></li>
         <li><div>
-          <span class="t"><a href="https://arxiv.org/abs/2503.12263" target="_blank" rel="noopener">The Science of the Einstein Telescope</a></span>
-          <span class="a">ET Collaboration (A. Abac et al.)</span>
-          <span class="v"><a href="https://iopscience.iop.org/article/10.1088/1475-7516/2026/03/081" target="_blank" rel="noopener">JCAP 03 (2026) 081</a><a href="https://arxiv.org/abs/2503.12263" target="_blank" rel="noopener">arXiv:2503.12263</a></span>
-        </div></li>
-        <li><div>
           <span class="t"><a href="https://arxiv.org/abs/2607.27311" target="_blank" rel="noopener">Assessing the Impact of Instrumental Requirements on the Scientific Performance of the Einstein Telescope</a></span>
           <span class="a">ET design-study taskforce (26 authors)</span>
           <span class="v"><a href="https://arxiv.org/abs/2607.27311" target="_blank" rel="noopener">arXiv:2607.27311</a></span>
+        </div></li>
+        <li><div>
+          <span class="t"><a href="https://arxiv.org/abs/2503.12263" target="_blank" rel="noopener">The Science of the Einstein Telescope</a></span>
+          <span class="a">ET Collaboration (A. Abac et al.)</span>
+          <span class="v"><a href="https://iopscience.iop.org/article/10.1088/1475-7516/2026/03/081" target="_blank" rel="noopener">JCAP 03 (2026) 081</a><a href="https://arxiv.org/abs/2503.12263" target="_blank" rel="noopener">arXiv:2503.12263</a></span>
         </div></li>
       </ol>
       <a class="allpubs" href="publications.html">All publications →</a>
@@ -353,14 +366,23 @@ footer .chirp-band { padding-top: 1rem; }
       <h2 class="sec">News</h2>
       <ul class="rows news">
         <li><span class="when">Oct 2026</span><span class="what">Started co-supervising the Master's thesis of M. Berva (Milano-Bicocca / Aix-Marseille).</span></li>
+        <li><span class="when">Oct 2026</span><span class="what">New paper with V. De Renzis on a weakly modelled reconstruction of the joint compact-binary mass plane and its impact on spectral-siren cosmology, submitted to PRD. <a href="https://arxiv.org/abs/2610.10535" target="_blank" rel="noopener">Read ↗</a></span></li>
         <li><span class="when">Sep 2026</span><span class="what">New paper on dark sirens as astrophysical probes: inferring the galaxy–merger relation and ranking individual hosts, submitted to PRL. <a href="https://arxiv.org/abs/2609.38110" target="_blank" rel="noopener">Read ↗</a></span></li>
-        <li><span class="when">Sep 2026</span><span class="what">Our paper on the robustness of <span class="m">H</span><sub>0</sub> to redshift evolution of the black-hole mass spectrum is published in Phys. Rev. D. <a href="https://journals.aps.org/prd/abstract/10.1103/jk7y-ddyb" target="_blank" rel="noopener">Read ↗</a></span></li>
+        <li><span class="when">Sep 2026</span><span class="what">Published in Phys. Rev. D: gravitational-wave constraints on <i>H</i><sub>0</sub> are robust to redshift evolution of the black-hole mass spectrum. <a href="https://journals.aps.org/prd/abstract/10.1103/jk7y-ddyb" target="_blank" rel="noopener">Read ↗</a></span></li>
         <li><span class="when">Jul 2026</span><span class="what">The blinded spectral-siren mock data challenge for the third-generation era is published in A&amp;A. <a href="https://www.aanda.org/articles/aa/full_html/2026/07/aa59517-26/aa59517-26.html" target="_blank" rel="noopener">Read ↗</a></span></li>
         <li><span class="when">Mar 2026</span><span class="what"><em>The Science of the Einstein Telescope</em> is published in JCAP. <a href="https://iopscience.iop.org/article/10.1088/1475-7516/2026/03/081" target="_blank" rel="noopener">Read ↗</a></span></li>
       </ul>
     </div>
   </section>
 
+  <section class="block" id="quote">
+    <div class="wrap">
+      <blockquote class="quote">
+        <p>“He who reads knows much; he who observes knows more.”</p>
+        <footer>attributed to Alexandre Dumas</footer>
+      </blockquote>
+    </div>
+  </section>
 </main>
 
 <footer>
