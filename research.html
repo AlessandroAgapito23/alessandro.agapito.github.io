@@ -288,10 +288,11 @@ footer .chirp-band { padding-top: 1rem; }
           <span class="m">d</span><sub>L</sub>(<span class="m">z</span>) ≈ <span class="m">cz</span> / <span class="m">H</span><sub>0</sub>, &nbsp;&nbsp; <span class="m">m</span><sub>det</sub> = (1 + <span class="m">z</span>) <span class="m">m</span><sub>src</sub>
           <span class="note">The signal gives <span class="m">d</span><sub>L</sub> and the redshifted masses. A known scale in the source-frame masses, or a host galaxy, supplies <span class="m">z</span>.</span>
         </div>
-        <p>My Ph.D., supervised by <a href="https://inspirehep.net/authors/1498209" target="_blank" rel="noopener">Michele Mancarella</a> at the Centre de Physique Théorique in Marseille, targets the systematics that limit these methods: the mass model and its redshift evolution, and the galaxy–merger relation. I design the methods to scale from the current LVK network to third-generation detectors, using hierarchical population models, Hamiltonian Monte Carlo on GPUs, and normalizing flows for expensive steps such as selection effects.</p>
+        <p>My Ph.D., supervised by <a href="https://inspirehep.net/authors/1498209" target="_blank" rel="noopener">Michele Mancarella</a> at the Centre de Physique Théorique in Marseille, targets the systematics that limit these methods: the mass model and its redshift evolution, and the galaxy–merger relation. I design the methods to scale from the current LVK network to third-generation detectors, using hierarchical population models and Hamiltonian Monte Carlo on GPUs. As a background effort, I also explore machine-learning tools, such as normalizing flows and neural networks, for computationally expensive steps of standard-siren analyses like selection-effect estimation.</p>
         <dl class="facts">
           <div><dt>Collaborations</dt><dd>LIGO–Virgo–KAGRA (Virgo, CBC group; cosmology analysts team) · Einstein Telescope (Observational Science Board) · GdR Ondes Gravitationnelles</dd></div>
-          <div><dt>Methods</dt><dd>Hierarchical Bayesian inference, HMC, mixture models, normalizing flows, Fisher forecasts</dd></div>
+          <div><dt>Methods</dt><dd>Hierarchical Bayesian inference, HMC, mixture models, Fisher forecasts</dd></div>
+          <div><dt>Background interests</dt><dd>Machine learning: normalizing flows, neural networks</dd></div>
           <div><dt>Group role</dt><dd>Coordinator of the CPT cosmology group's weekly meetings</dd></div>
         </dl>
 
@@ -380,26 +381,26 @@ footer .chirp-band { padding-top: 1rem; }
 
   <section class="block" id="next">
     <div class="wrap">
-      <p class="label">§ Next</p>
-      <h2 class="sec">Open questions I want to work on</h2>
+      <p class="label">§ Outlook</p>
+      <h2 class="sec">Future research directions</h2>
+      <p class="prose" style="max-width:40em;margin:0 0 2rem;color:var(--muted)">Both the dark-siren and the spectral-siren programmes offer natural short- and medium-term follow-ups, as well as longer-term research directions. All of them converge on the same goal: applying increasingly refined methods to observations as they become available, from the upcoming IGWN IR1 and Euclid DR1 data releases to next-generation detectors such as the Einstein Telescope.</p>
       <div class="future">
         <div>
-          <span class="q">Q1 · dark sirens</span>
-          <h3>Which galaxies host compact-binary mergers?</h3>
-          <p>Map the trade-off between localization accuracy and galaxy–merger information, keep the cost down with GPU sampling, then move past a single universal host relation toward heterogeneous galaxy subpopulations inferred jointly with the luminosity function.</p>
+          <span class="q">I · dark sirens</span>
+          <h3>Compact-binary astrophysics with dark sirens</h3>
+          <p>A first step is to characterise the trade-off between localization accuracy and galaxy–merger information, since host rankings and cosmological inference need not be optimised by the same events, while keeping computational costs under control through GPU acceleration or alternative sampling schemes. Over the longer term: moving beyond a single universal host relation towards heterogeneous galaxy subpopulations, and inferring galaxy weights jointly with the parameters of the luminosity function.</p>
         </div>
         <div>
-          <span class="q">Q2 · spectral sirens</span>
-          <h3>How flexible can a mass model be before it stops measuring <span class="m">H</span><sub>0</sub>?</h3>
-          <p>Extend the weakly modelled reconstruction to the joint mass–redshift space and to spin, with explicit robustness tests on the priors and model construction that flexibility quietly reintroduces.</p>
+          <span class="q">II · spectral sirens</span>
+          <h3>Mass-model reconstruction in spectral-siren cosmology</h3>
+          <p>Generalising the weakly modelled reconstruction to the joint mass–redshift space and, more ambitiously, to spin, to characterise features informative for both cosmology and formation channels. Flexibility does not remove the modelling problem but shifts it to model construction and priors, which calls for systematic robustness tests. Fully general two-dimensional mass models, alongside targeted parametrisations of the mass plane, are a natural longer-term direction.</p>
         </div>
         <div>
-          <span class="q">Q3 · cross-correlations</span>
-          <h3>Do gravitational waves trace galaxies the way galaxies do?</h3>
-          <p>Use the measured galaxy–merger relation to interpret the GW clustering bias and to test the common assumption that GW and galaxy biases coincide, ahead of IGWN IR1, Euclid DR1 and the Einstein Telescope.</p>
+          <span class="q">III · cross-correlations</span>
+          <h3>Galaxy–merger relation and gravitational-wave clustering</h3>
+          <p>GW–galaxy cross-correlations probe ensemble clustering through the GW bias, whereas dark sirens give access to specific galaxy–merger associations. Current analyses typically assume that GW and galaxy biases coincide; the measured galaxy–merger relation opens a complementary channel to interpret the clustering bias and test this assumption, alongside the distinct systematics of cross-correlation methods.</p>
         </div>
       </div>
-
     </div>
   </section>
 
